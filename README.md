@@ -25,4 +25,4 @@
 ### Handle Scheme Links
 The code you need to handle the link (when it's called) is written in AppDelegate.swift file.
 
-**Note:** *From Safari, enter the following url to check it: * [Custom Scheme Link](https://universalelinks.herokuapp.com/appios/product.html). It is important that the URL Scheme is `universalelink` to try it.*
+**Note:** *From Safari, enter the following url to check it: * [Custom Scheme Link](https://universalelinks.herokuapp.com/appios/product.html). It is important that the URL Scheme is `universalelinks` to try it.*
