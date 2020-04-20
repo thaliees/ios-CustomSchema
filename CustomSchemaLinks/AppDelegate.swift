@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  CustomSchemaLinks
 //
-//  Created by SoftwareRB on 4/16/20.
+//  Created by Thaliees on 4/16/20.
 //  Copyright © 2020 Thaliees. All rights reserved.
 //
 

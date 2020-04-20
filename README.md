@@ -1,4 +1,4 @@
-# Custom Schema Link
+# Custom Scheme Link
 [Project created with Xcode V11.4]
 [Deployment Target > 11.0 ]
 
@@ -11,8 +11,8 @@
 1. Select the "CustomSchemaLinks" target
 1. Select the "Info" Section
 1. In URL Types Section, press + and add your scheme:
-[ ] Identifier: Your bundle ID
-[ ] URL Schemes: How will your app be identified from another application
+* [ ] Identifier: Your bundle ID
+* [ ] URL Schemes: How will your app be identified from another application
 1. Then, select Info.plist file.
 1. Add the next code (select Open As>Source code):
 `<key>LSApplicationQueriesSchemes</key>
@@ -24,3 +24,5 @@
 
 ### Handle Scheme Links
 The code you need to handle the link (when it's called) is written in AppDelegate.swift file.
+
+**Note:** *From Safari, enter the following url to check it: * [Custom Scheme Link](https://universalelinks.herokuapp.com/appios/product.html). It is important that the URL Scheme is `universalelink` to try it.*
