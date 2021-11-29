@@ -15,14 +15,14 @@
 * [ ] URL Schemes: How will your app be identified from another application
 1. Then, select Info.plist file.
 1. Add the next code (select Open As>Source code):
-`<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>universalelinks</string>
-	</array>`
+     `<key>LSApplicationQueriesSchemes</key>
+      <array>
+          <string>deep-links-universal</string>
+      </array>`
 
 * The sheme is similar to YOU_URL_SCHEMES://PATH
 
 ### Handle Scheme Links
 The code you need to handle the link (when it's called) is written in AppDelegate.swift file.
 
-**Note:** *From Safari, enter the following url to check it: * [Custom Scheme Link](https://universalelinks.herokuapp.com/appios/product.html). It is important that the URL Scheme is `universalelinks` to try it.*
+**Note:** *From Safari, enter the following url to check it: * [Custom Scheme Link](https://deep-links-universal.herokuapp.com/appios/product.html). It is important that the URL Scheme is `deep-links-universal` to try it.*
