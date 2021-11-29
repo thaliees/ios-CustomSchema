@@ -25,7 +25,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         DispatchQueue.main.async {
             APIManager.sharedInstance.getProducts(page: 1, onSuccess: { (products) in
                 DispatchQueue.main.async {
-                    self.list = products.products
+                    self.list = products.wines
                     self.tableItems.reloadData()
                     self.loading.stopAnimating()
                 }

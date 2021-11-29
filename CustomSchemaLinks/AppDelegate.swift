@@ -24,19 +24,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("source application = \(sendingAppID ?? "Unknown")")
         
         // Process the URL.
+        guard let scheme = url.scheme,
+              scheme.localizedCaseInsensitiveCompare("deep-links-universal") == .orderedSame,
+              let view = url.host else { return false }
         guard let components = NSURLComponents(url: url, resolvingAgainstBaseURL: true),
-            let path = components.path,
             let params = components.queryItems else {
                 print("Invalid URL or path missing")
                 return false
         }
-        print(path)
+        
         if let id = params.first(where: { $0.name == "id" })?.value {
-            print("path = \(path)")
+            print("path = \(view)")
             print("id = \(id)")
             // Handle of the paths
             // It is possible to use the switch
-            if path == "product" {
+            if view == "product" {
                 presentDetailViewController(id)
             }
             return true

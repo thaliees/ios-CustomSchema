@@ -41,9 +41,8 @@ class DetailsViewController: UIViewController {
     private func fillData(details: Product) {
         self.title = details.name.capitalized
         if details.image != "" { imageItem.load(url: URL(string: details.image)!) }
-        nameItem.text = details.name.capitalized + "\n" + details.characteristics.characteristicsDescription.capitalized
-        
-        descripItem.text = details.characteristics.color.capitalized + "\n" + details.characteristics.volAlch + " alcohol"
+        nameItem.text = details.name.capitalized
+        descripItem.text = details.characteristics.volAlch + " alcohol"
         
         loading.stopAnimating()
     }

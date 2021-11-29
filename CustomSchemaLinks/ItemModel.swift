@@ -10,36 +10,51 @@ import Foundation
 
 // MARK: - ItemModel
 struct ItemModel: Codable {
-    let products: [Product]
+    let wines: [Product]
 }
 
 // MARK: - Product
 struct Product: Codable {
-    let id, name, image, storeID: String
-    let storeName, lastModification: String
-    let characteristics: Characteristics
+    let id, name, wineDescription: String
+        let category: String
+        let subcategory: String
+        let image: String
+        let lastModification: String
+        let store: Store
+        let characteristics: Characteristics
+        let salesConfig: SalesConfig
+
+        enum CodingKeys: String, CodingKey {
+            case id = "_id"
+            case name
+            case wineDescription = "description"
+            case category, subcategory, image, lastModification, store, characteristics, salesConfig
+        }
+}
+
+// MARK: - Store
+struct Store: Codable {
+    let id, name: String
+    let avatar: String
+    let phoneContact, emailContact: String
 
     enum CodingKeys: String, CodingKey {
         case id = "_id"
-        case name, image
-        case storeID = "storeId"
-        case storeName, lastModification, characteristics
+        case name, avatar, phoneContact, emailContact
     }
 }
 
 // MARK: - Characteristics
 struct Characteristics: Codable {
-    let characteristicsDescription, size, volAlch, color: String
-
-    enum CodingKeys: String, CodingKey {
-        case characteristicsDescription = "description"
-        case size, volAlch, color
-    }
+    let volume: String
+    let volAlch: String
+    let compositions: [String]
+    let pairsWellWith: [String]
 }
 
-// MARK: - RefreshTokenModel
-struct RefreshTokenModel: Codable {
-    let token: String
+// MARK: - SalesConfig
+struct SalesConfig: Codable {
+    let publicPrice, memberPrice: Int
 }
 
 // MARK: - ErrorModel
